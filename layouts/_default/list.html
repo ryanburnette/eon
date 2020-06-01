@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="section article-list">
+  <div class="container">
+    <div class="content">
+      {{ range sort .Paginator.Pages }}
+      <article class="item">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Date}}
+        <p>
+          <!-- prettier-ignore -->
+          {{ partial "date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}
+        </p>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

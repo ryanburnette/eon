@@ -1,0 +1,36 @@
+.header {
+  $line-height: 2rem * 1.618;
+
+  display: flex;
+  padding: 2rem;
+  margin: 0 0 (2rem * 1.618) 0;
+  .brand {
+    flex-grow: 1;
+  }
+  .content,
+  h1 {
+    margin: 0;
+  }
+  h1 {
+    line-height: $line-height;
+  }
+  a {
+    color: $black;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    margin: 0 (1.618rem / 2);
+    line-height: $line-height;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.875rem;
+  }
+  li:last-of-type {
+    margin-right: 0;
+  }
+}

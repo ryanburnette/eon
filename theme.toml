@@ -1,0 +1,12 @@
+name = "Techstudio"
+license = "MIT"
+licenselink = "https://github.com/techstudio/hugo-theme/blob/master/LICENSE"
+description = ""
+homepage = "https://techstudio.co/theme"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Ryan Burnette"
+  homepage = "https://ryanburnette.com"
