@@ -5,9 +5,6 @@ $fullhd-enabled: false;
 @import 'bulma/sass/base/_all';
 @import 'bulma/sass/elements/container';
 @import '_content';
-html {
-  text-rendering: auto;
-}
 @import '_body';
 @import '_header';
 @import '_item-meta';
