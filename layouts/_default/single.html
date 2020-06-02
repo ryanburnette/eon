@@ -1,17 +1,12 @@
 {{ define "main" }}
-<section class="section posts-single">
+<section class="section default-single">
   <div class="container">
     <div class="content">
-      <div class="title">
-        <h1>{{ .Title }}</h1>
+      <div class="item-meta">
+        <p>{{ .Page.Date.Format "January 2, 2006" }}</p>
       </div>
-      <div class="meta">
-        {{ with .Date}}
-        <p>
-          <!-- prettier-ignore -->
-          {{ partial "date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}
-        </p>
-        {{ end }}
+      <div class="item-title">
+        <h1 class="title">{{ .Title }}</h1>
       </div>
       <p>{{ .Content }}</p>
     </div>

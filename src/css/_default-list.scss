@@ -1,0 +1,23 @@
+.default-list {
+  .item {
+    padding: 3rem 0;
+    &:first-child {
+      padding-top: 0;
+    }
+    border-bottom: 1px solid #dadada;
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    h2,
+    p {
+      margin: 0 0 1rem;
+    }
+    .title {
+      margin: 0;
+    }
+    a {
+      color: $black;
+    }
+  }
+}

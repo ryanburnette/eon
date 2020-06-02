@@ -1,8 +1,8 @@
 {{ define "main" }}
-<section class="section article-list">
+<section class="section default-list">
   <div class="container">
     <div class="content">
-      {{ range sort .Paginator.Pages }}
+      {{ range .Pages }}
       <article class="item">
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         {{ with .Date}}

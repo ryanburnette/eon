@@ -1,9 +1,8 @@
 .header {
-  $line-height: 2rem * 1.618;
-
+  $line-height: 3rem;
   display: flex;
-  padding: 2rem;
-  margin: 0 0 (2rem * 1.618) 0;
+  padding: 2rem 2rem 6rem;
+  margin: 0;
   .brand {
     flex-grow: 1;
   }
@@ -12,6 +11,7 @@
     margin: 0;
   }
   h1 {
+    font-size: 1.75rem;
     line-height: $line-height;
   }
   a {

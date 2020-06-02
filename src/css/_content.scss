@@ -1,0 +1,30 @@
+@import 'bulma/sass/elements/content';
+.content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 1.5rem;
+    &:not(:first-child) {
+      margin-top: 3rem;
+    }
+  }
+  p {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  pre,
+  code,
+  pre code {
+    font-family: 'Consolas', monospace;
+  }
+  pre {
+    padding: 1.5rem 1.5rem 1.4rem;
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
