@@ -1,0 +1,15 @@
+// breakpoints
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+@import 'sass-mediaqueries';
+@import 'bulma/sass/utilities/_all';
+@import 'bulma/sass/base/_all';
+@import 'bulma/sass/elements/container';
+@import 'section';
+@import 'content';
+@import 'body';
+@import 'header';
+@import 'item-meta';
+@import 'default-list';
+@import 'default-single';
+@import 'footer';

@@ -1,6 +1,6 @@
 {
   "name": "@techstudio/hugo-theme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "watch": "webpack --config webpack.development.js --watch",
     "build": "webpack --config webpack.production.js"
@@ -20,5 +20,8 @@
     "webpack": "^5.0.0-beta.16",
     "webpack-cli": "^3.3.11",
     "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "sass-mediaqueries": "^1.6.1"
   }
 }
