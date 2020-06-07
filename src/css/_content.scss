@@ -12,14 +12,17 @@
     }
   }
   p {
+    font-size: 1.125rem;
+  }
+  p {
     &:not(:last-child) {
       margin-bottom: 1.5rem;
     }
   }
   pre,
-  code,
-  pre code {
+  code {
     font-family: 'Consolas', monospace;
+    font-size: 1rem;
   }
   pre {
     padding: 1.5rem 1.5rem 1.4rem;

@@ -1,6 +1,6 @@
 .postmeta {
   $height: 2rem;
-  color: lighten($black, 27);
+  color: lighten($black, 30);
   margin-bottom: 1rem;
   p,
   span {
@@ -8,6 +8,7 @@
   }
   p {
     margin: 0;
+    font-size: 1rem;
     line-height: $height;
   }
   p > span:not(:last-child):after {
