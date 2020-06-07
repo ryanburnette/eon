@@ -1,6 +1,6 @@
 {
   "name": "@techstudio/hugo-theme",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "scripts": {
     "watch": "webpack --config webpack.development.js --watch",
     "build": "webpack --config webpack.production.js"

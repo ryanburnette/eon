@@ -24,3 +24,10 @@ npx webpack --config webpack.production.js
 You can copy the webpack configuration files down to your own project, as well
 as create a main.scss and main.js in your own project's respective directories.
 Include the theme partials, copy partials down and edit them, or override them.
+
+## Configuration
+
+### Meta Redirect
+
+Set the `redirect` param to the new URL in front-matter to set a meta redirect
+on that page.
