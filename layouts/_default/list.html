@@ -4,13 +4,8 @@
     <div class="content">
       {{ range .Pages }}
       <article class="item">
+        {{ partial "postmeta" . }}
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ with .Date}}
-        <p>
-          <!-- prettier-ignore -->
-          {{ partial "date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}
-        </p>
-        {{ end }}
       </article>
       {{ end }}
     </div>

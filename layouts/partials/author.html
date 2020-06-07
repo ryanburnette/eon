@@ -1,0 +1,18 @@
+<span class="author">
+  <!-- prettier-ignore -->
+  {{ $author := newScratch }}
+  {{ if (isset .Params "author") }}
+  {{ $author.Set "name" .Params.author.name }}
+  {{ $author.Set "email" .Params.author.email }}
+  {{ else }}
+  {{ $author.Set "name" .Site.Author.name }}
+  {{ $author.Set "email" .Site.Author.email }}
+  {{ end }}
+
+  <!-- prettier-ignore -->
+  {{ if and (eq .Site.Params.gravatar true) }}
+  <img class="gravatar" src="https://www.gravatar.com/avatar/{{ md5 ($author.Get "email") }}?s=64&d=identicon">
+  {{ end }}
+
+  <span class="name">{{ $author.Get "name" }}</span>
+</span>

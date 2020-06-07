@@ -1,0 +1,25 @@
+.postmeta {
+  $height: 2rem;
+  color: lighten($black, 27);
+  margin-bottom: 1rem;
+  p,
+  span {
+    display: inline-block;
+  }
+  p {
+    margin: 0;
+    line-height: $height;
+  }
+  p > span:not(:last-child):after {
+    content: '\2022';
+    padding: 0 0.3rem;
+  }
+  .gravatar {
+    height: $height;
+    border-radius: 10rem;
+    margin: 0 0.5rem 0 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}

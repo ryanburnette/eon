@@ -2,9 +2,7 @@
 <section class="section default-single">
   <div class="container">
     <div class="content">
-      <div class="item-meta">
-        <p>{{ .Page.Date.Format "January 2, 2006" }}</p>
-      </div>
+      {{ partial "postmeta" . }}
       <div class="item-title">
         <h1 class="title">{{ .Title }}</h1>
       </div>
