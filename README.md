@@ -32,6 +32,10 @@ development.
 npx webpack --config webpack.production.js
 ```
 
+### Purge CSS
+
+TODO
+
 ### Customize
 
 You can copy the webpack configuration files down to your own project, as well
