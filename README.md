@@ -3,15 +3,28 @@
 This is the TechStudio Hugo theme. It's built for our needs, so it might not
 meet yours.
 
+## Core Concepts
+
+- It's bad to have a partial where there an unequal number of opening and
+  closing tags.
+- Break things up into tiny, logical, well-defined pieces so it's easy to
+  override or use what you need.
+
 ## Assets
 
 The theme contains assets as well as webpack build steps.
 
 ### Development
 
+Run webpack in watch mode during development.
+
 ```
-npx webpack --config webpack.development.js
+npx webpack --watch --config webpack.development.js
 ```
+
+Consider using a development script like the example found in
+`scripts/development` when you have multiple processes to spin during
+development.
 
 ### Production Build
 

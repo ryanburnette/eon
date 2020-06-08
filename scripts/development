@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+'use strict';
+
+var path = require('path');
+
+var hugoCacheDir = path.resolve(__dirname, '.hugo-cache');
+
+function spawn({ cmd, cwd }) {
+  return require('child_process').spawn(cmd, {
+    env: {
+      PATH: process.env.PATH
+    },
+    shell: true,
+    stdio: ['inherit', 'inherit', 'inherit'],
+    cwd: cwd || process.cwd()
+  });
+}
+
+spawn({ cmd: `hugo server -D -p 3000 --cacheDir ${hugoCacheDir}` });
+spawn({
+  cmd: 'npx webpack --config webpack.development.js --watch --colors',
+  cwd: path.join(process.cwd(), 'themes/techstudio')
+});
