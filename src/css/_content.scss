@@ -30,4 +30,7 @@
       margin-bottom: 1.5rem;
     }
   }
+  .highlight:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
 }
