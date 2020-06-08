@@ -10,7 +10,7 @@
   {{ end }}
 
   <!-- prettier-ignore -->
-  {{ if and (eq .Site.Params.gravatar true) }}
+  {{ if .Site.Params.gravatar }}
   <img class="gravatar" src="https://www.gravatar.com/avatar/{{ md5 ($author.Get "email") }}?s=64&d=identicon">
   {{ end }}
 
