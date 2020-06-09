@@ -11,13 +11,9 @@
       margin-top: 3rem;
     }
   }
-  p {
+  p,
+  li {
     font-size: 1.125rem;
-  }
-  p {
-    &:not(:last-child) {
-      margin-bottom: 1.5rem;
-    }
   }
   pre,
   code {
@@ -26,10 +22,14 @@
   }
   pre {
     padding: 1.5rem 1.5rem 1.4rem;
-    &:not(:last-child) {
-      margin-bottom: 1.5rem;
-    }
   }
+  p:not(:last-child),
+  dl:not(:last-child),
+  ol:not(:last-child),
+  ul:not(:last-child),
+  blockquote:not(:last-child),
+  pre:not(:last-child),
+  table:not(:last-child),
   .highlight:not(:last-child) {
     margin-bottom: 1.5rem;
   }

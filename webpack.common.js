@@ -5,7 +5,7 @@ var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var crypto = require('crypto');
 
 var version = require('./package.json').version;
-var hash = crypto.createHash('md5').update(version).digest('hex');
+var hash = crypto.createHash('md5').update(version).digest('hex').substr(0, 20);
 
 module.exports = {
   context: path.resolve(__dirname, './src'),
