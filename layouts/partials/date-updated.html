@@ -1,0 +1,3 @@
+{{ if (isset .Params "updated") }}
+<span class="date-updated">Updated {{ dateFormat "January 2, 2006" .Params.updated }}</span>
+{{ end }}

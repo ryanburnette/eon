@@ -4,7 +4,7 @@
   margin-bottom: 1rem;
   p,
   span {
-    display: inline-block;
+    display: flex;
   }
   p {
     margin: 0;
@@ -13,7 +13,7 @@
   }
   p > span:not(:last-child):after {
     content: '\2022';
-    padding: 0 0.3rem;
+    padding: 0 0.5rem;
   }
   .gravatar {
     height: $height;
