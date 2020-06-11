@@ -2,9 +2,14 @@
 <section class="section default-single">
   <div class="container">
     <div class="content">
-      {{ partial "postmeta" . }}
+      {{ partial "postmeta-head" . }}
       <h1 class="title">{{ .Title }}</h1>
+      <!-- prettier-ignore -->
       {{ .Content }}
+      <!-- prettier-ignore -->
+      {{ partial "postmeta-foot" . }}
+      <!-- prettier-ignore -->
+      {{ partial "disqus" . }}
     </div>
   </div>
 </section>

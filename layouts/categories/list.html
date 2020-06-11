@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container">
+    <h1>{{ .Data.Term }}</h1>
+  </div>
+</section>
+<section class="section blog-list">
+  <div class="container">
+    <div class="content">
+      {{ partial "bloghead" . }} {{ range .Pages }}
+      <!-- prettier-ignore -->
+      {{ if not (isset .Params "noindex") }}
+      <article class="item">
+        {{ partial "postmeta-head" . }}
+        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+        <!-- prettier-ignore -->
+        {{ partial "postmeta-foot" . }}
+      </article>
+      <!-- prettier-ignore -->
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

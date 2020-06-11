@@ -1,6 +1,6 @@
 .default-list {
   .item {
-    padding: 3rem 0;
+    padding: 3rem 0 2.5rem;
     &:first-child {
       padding-top: 0;
     }
@@ -9,14 +9,18 @@
       padding-bottom: 0;
       border-bottom: none;
     }
-    h2 {
-      margin: 0 0 1rem;
-    }
     .title {
       margin: 0;
     }
     a {
       color: $black;
+    }
+    .postmeta-head,
+    .postmeta-foot {
+      margin: 0 0 0.5rem;
+    }
+    h1 {
+      margin: -0.1rem 0 0.5rem;
     }
   }
 }

@@ -1,14 +1,18 @@
-.postmeta {
+.postmeta-head {
   $height: 2rem;
   color: lighten($black, 30);
-  margin-bottom: 1rem;
+  p,
+  span,
+  li {
+    font-size: 1rem;
+  }
   p,
   span {
     display: flex;
+    flex-wrap: wrap;
   }
   p {
     margin: 0;
-    font-size: 1rem;
     line-height: $height;
   }
   p > span:not(:last-child):after {
@@ -18,9 +22,19 @@
   .gravatar {
     height: $height;
     border-radius: 10rem;
-    margin: 0 0.5rem 0 0;
+    margin-right: 0.6rem;
     padding: 0;
     display: inline-block;
     vertical-align: bottom;
+  }
+  a {
+    color: $light-gray;
+  }
+  a:hover {
+    color: $light-gray;
+    text-decoration: underline;
+  }
+  .author {
+    font-weight: bold;
   }
 }

@@ -1,0 +1,10 @@
+{{- if (isset .Params "categories") -}}
+<div class="categories">
+  <span class="catlabel"><strong>Categories:</strong></span>
+  <ul>
+    {{ range .GetTerms "categories" }}
+    <li><a href="{{ .Permalink }}">{{ .Page.Title }}</a></li>
+    {{ end }}
+  </ul>
+</div>
+{{- end -}}

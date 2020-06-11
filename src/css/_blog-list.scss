@@ -1,0 +1,30 @@
+.blog-list {
+  @extend .default-list;
+  .controls-tags {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #dadada;
+  }
+  .controls-tags {
+    ul {
+      @include commalist;
+    }
+    p,
+    ul,
+    li {
+      font-size: 1rem;
+    }
+  }
+  .catlabel {
+    padding-right: 0.3rem;
+  }
+  a {
+    color: $black;
+  }
+  a:hover {
+    color: $black;
+    text-decoration: underline;
+  }
+  .postmeta-foot:empty {
+    display: none;
+  }
+}

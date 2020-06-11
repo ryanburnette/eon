@@ -1,0 +1,28 @@
+<!-- prettier-ignore -->
+{{ if or (isset .Params "disqus") (isset .Params "disqus_identifier") (isset .Params "disqus_url") }}
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    {{ if (isset .Params "disqus_identifier") }}
+    this.page.identifier = {{ .Params.disqus_identifier }};
+    {{ end }}
+    {{ if (isset .Params "disqus_url") }}
+    this.page.url = {{ .Params.disqus_url }};
+    {{ end }}
+  };
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = '{{ $.Site.Params.disqus_url }}/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript"
+    >comments powered by Disqus.</a
+  ></noscript
+>
+{{ end }}

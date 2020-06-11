@@ -1,0 +1,17 @@
+.postmeta-foot {
+  p,
+  span,
+  li {
+    font-size: 1rem;
+  }
+  ul {
+    @include commalist;
+  }
+  a {
+    color: $light-gray;
+  }
+  a:hover {
+    color: $light-gray;
+    text-decoration: underline;
+  }
+}

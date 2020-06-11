@@ -1,0 +1,12 @@
+@mixin commalist {
+  &,
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li:not(:last-child):after {
+    content: ', ';
+  }
+}
