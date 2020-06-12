@@ -23,19 +23,21 @@
   pre {
     padding: 1.5rem 1.5rem 1.4rem;
   }
-  p:not(:last-child),
-  dl:not(:last-child),
-  ol:not(:last-child),
-  ul:not(:last-child),
-  blockquote:not(:last-child),
-  pre:not(:last-child),
-  table:not(:last-child),
-  .highlight:not(:last-child) {
-    margin-bottom: 1.5rem;
+  p,
+  dl,
+  ol,
+  ul,
+  blockquote,
+  pre,
+  table,
+  .highlight,
+  .postmeta-foot {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
   }
   img {
     display: block;
-    vertical-align: middle;
     max-width: 100%;
     max-height: 80vh;
     margin-right: auto;
