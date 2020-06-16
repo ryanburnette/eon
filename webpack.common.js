@@ -3,9 +3,12 @@
 var path = require('path');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var crypto = require('crypto');
+var fs = require('fs').promises;
 
 var version = require('./package.json').version;
-var hash = crypto.createHash('md5').update(version).digest('hex').substr(0, 20);
+var hash = crypto.createHash('md5').update(version).digest('hex');
+
+fs.writeFile('.assetshash', hash);
 
 module.exports = {
   context: path.resolve(__dirname, './src'),
