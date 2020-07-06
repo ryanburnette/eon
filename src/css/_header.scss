@@ -20,17 +20,4 @@
   a:hover {
     text-decoration: underline;
   }
-  ul {
-    display: flex;
-  }
-  li {
-    margin: 0 (1.618rem / 2);
-    line-height: $line-height;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.875rem;
-  }
-  li:last-of-type {
-    margin-right: 0;
-  }
 }
