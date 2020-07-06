@@ -33,7 +33,9 @@ function set() {
 function setDesktop() {
   navbar.classList.add('style-desktop');
   navbar.classList.remove('style-revealed');
-  navItemsRevealed.remove();
+  if (document.querySelector('.navbar-items-revealed')) {
+    navItemsRevealed.remove();
+  }
   revealed = false;
 }
 
