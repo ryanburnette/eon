@@ -2,7 +2,7 @@
   <div class="controls controls-tags">
     <span class="catlabel"><strong>Categories:</strong></span>
     <ul>
-      {{ range .Site.Taxonomies.categories }}
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
       <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
       {{ end }}
     </ul>
