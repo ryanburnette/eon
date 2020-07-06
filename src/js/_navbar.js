@@ -73,6 +73,9 @@ function addRevealer() {
   a.addEventListener('click', function (ev) {
     ev.preventDefault();
     toggleRevealed();
+    setTimeout(function () {
+      a.blur();
+    }, 100);
   });
 }
 
