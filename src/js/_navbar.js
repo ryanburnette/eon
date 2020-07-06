@@ -69,13 +69,9 @@ function addRevealer() {
   a.innerHTML = 'Menu';
   li.appendChild(a);
   navbar.querySelector('ul').appendChild(li);
-
   a.addEventListener('click', function (ev) {
     ev.preventDefault();
     toggleRevealed();
-    setTimeout(function () {
-      a.blur();
-    }, 100);
   });
 }
 
