@@ -1,0 +1,39 @@
+.header .navbar {
+  li,
+  a {
+    user-select: none;
+  }
+  .revealer {
+    display: none;
+  }
+  &.style-revealed li {
+    display: none;
+  }
+  &.style-revealed .revealer {
+    display: block;
+  }
+}
+.navbar-items-revealed {
+  margin: -1.854rem 0 3rem;
+  padding: 0 0 2rem;
+  text-align: center;
+  transition: opacity 180ms linear;
+  opacity: 0;
+  border-bottom: 1px solid #dadada;
+  &.fadein {
+    opacity: 1;
+  }
+  li {
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.875rem;
+  }
+  a {
+    color: $black;
+  }
+  a:hover {
+    color: $black;
+    text-decoration: underline;
+  }
+}
