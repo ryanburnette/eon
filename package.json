@@ -1,6 +1,6 @@
 {
-  "name": "@techstudio/hugo-theme",
-  "version": "0.20.0",
+  "name": "@ryanburnette/hugo-theme",
+  "version": "0.21.0",
   "scripts": {
     "watch": "webpack --config webpack.development.js --watch",
     "build": "webpack --config webpack.production.js"
@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "The TechStudio Hugo theme.",
   "devDependencies": {
+    "@ryanburnette/spawn-in-parallel": "^1.0.0",
     "autoprefixer": "^9.8.0",
     "bulma": "^0.8.2",
     "css-loader": "^3.5.3",
@@ -16,12 +17,10 @@
     "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.2",
+    "sass-mediaqueries": "^1.6.1",
     "style-loader": "^1.2.1",
     "webpack": "^5.0.0-beta.16",
     "webpack-cli": "^3.3.11",
     "webpack-merge": "^4.2.2"
-  },
-  "dependencies": {
-    "sass-mediaqueries": "^1.6.1"
   }
 }

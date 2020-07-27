@@ -1,8 +1,8 @@
-name = "Techstudio"
-license = "MIT"
-licenselink = "https://github.com/techstudio/hugo-theme/blob/master/LICENSE"
+name = "Ryan Burnette"
+license = "ISC"
+licenselink = "https://github.com/ryanburnette/hugo-theme/blob/master/LICENSE"
 description = ""
-homepage = "https://techstudio.co/theme"
+homepage = "https://github.com.com/ryanburnette/hugo-theme"
 tags = []
 features = []
 min_version = "0.41.0"
