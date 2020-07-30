@@ -1,6 +1,22 @@
 #!/usr/bin/env node
 'use strict';
-require('@ryanburnette/spawn-in-parallel')([
-  'hugo server -D -p 3000 --cacheDir .hugocache',
-  'npx webpack --config webpack.development.js --watch --colors'
+
+var path = require('path');
+var spawn = require('@ryanburnette/spawn-in-parallel');
+
+var cacheDir = path.resolve(__dirname, '../..', '.hugo');
+
+spawn([
+  {
+    cmd: `hugo server -D -p 3000 --cacheDir ${cacheDir}`,
+    opts: {
+      cwd: path.resolve(__dirname, '..')
+    }
+  },
+  {
+    cmd: 'npx webpack --config webpack.development.js --watch --colors',
+    opts: {
+      cwd: path.resolve(__dirname, '..')
+    }
+  }
 ]);

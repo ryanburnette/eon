@@ -39,11 +39,30 @@ TODO
 
 TODO
 
+### Prettier
+
+Why run prettier on your production assets? Well, maybe you shouldn't, but I
+like to.
+
+```bash
+themes/arch/scripts/prettier
+```
+
 ### Customize
 
 You can copy the webpack configuration files down to your own project, as well
 as create a main.scss and main.js in your own project's respective directories.
 Include the theme partials, copy partials down and edit them, or override them.
+
+### Hugo Cache
+
+The hugo cache is set to `./.hugo` for easier clearing.
+
+```bash
+rm -rf .hugo
+```
+
+Make sure `.hugo/` is in the project `.gitignore`.
 
 ## Configuration
 

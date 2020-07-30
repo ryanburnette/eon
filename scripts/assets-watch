@@ -1,1 +1,1 @@
-webpack --config webpack.development.js --watch --colors
+npx webpack --config webpack.development.js --watch --colors

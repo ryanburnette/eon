@@ -1,1 +1,1 @@
-webpack --config wepback.production.js --production
+npx webpack --config wepback.production.js --production
