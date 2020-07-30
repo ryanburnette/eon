@@ -1,7 +1,6 @@
-# TechStudio Hugo Theme
+# arch
 
-This is the TechStudio Hugo theme. It's built for our needs, so it might not
-meet yours.
+This is the arch hugo theme... a work in progress.
 
 ## Core Concepts
 
@@ -33,6 +32,10 @@ npx webpack --config webpack.production.js
 ```
 
 ### Purge CSS
+
+TODO
+
+### Hash Assets
 
 TODO
 

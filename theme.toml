@@ -1,8 +1,8 @@
-name = "Ryan Burnette"
+name = "arch"
 license = "ISC"
-licenselink = "https://github.com/ryanburnette/hugo-theme/blob/master/LICENSE"
+licenselink = "https://github.com/ryanburnette/arch/blob/master/LICENSE"
 description = ""
-homepage = "https://github.com.com/ryanburnette/hugo-theme"
+homepage = "https://github.com.com/ryanburnette/arch"
 tags = []
 features = []
 min_version = "0.41.0"
