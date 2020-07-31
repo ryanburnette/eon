@@ -1,14 +1,12 @@
 {
-  "name": "@ryanburnette/hugo-theme",
-  "version": "0.21.0",
-  "scripts": {
-    "watch": "webpack --config webpack.development.js --watch",
-    "build": "webpack --config webpack.production.js"
-  },
+  "name": "@ryanburnette/arch",
+  "private": true,
+  "version": "0.22.0",
   "author": "Ryan Burnette <ryan.burnette@gmail.com> (https://ryanburnette.com)",
   "license": "ISC",
-  "description": "The TechStudio Hugo theme.",
+  "description": "The arch Hugo theme.",
   "devDependencies": {
+    "@ryanburnette/asset-hash": "^0.1.1",
     "@ryanburnette/spawn-in-parallel": "^1.0.1",
     "autoprefixer": "^9.8.0",
     "bulma": "^0.8.2",
