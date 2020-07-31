@@ -1,7 +1,7 @@
 {
   "name": "@ryanburnette/arch",
   "private": true,
-  "version": "0.23.0",
+  "version": "0.22.1",
   "author": "Ryan Burnette <ryan.burnette@gmail.com> (https://ryanburnette.com)",
   "license": "ISC",
   "description": "The arch Hugo theme.",
