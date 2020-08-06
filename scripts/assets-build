@@ -1,1 +1,15 @@
-npx webpack --config webpack.production.js --production
+#!/usr/bin/env node
+
+var path = require('path');
+var { spawn } = require('child_process');
+
+var cmd = 'npx webpack --config webpack.production.js --production';
+
+spawn(cmd, {
+  env: {
+    PATH: process.env.PATH
+  },
+  shell: true,
+  stdio: ['inherit', 'inherit', 'inherit'],
+  cwd: path.resolve(__dirname, '..')
+});
