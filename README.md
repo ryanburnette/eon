@@ -18,7 +18,7 @@ The theme contains assets as well as webpack build steps.
 Run webpack in watch mode during development.
 
 ```
-npx webpack --watch --config webpack.development.js
+(cd themes/arch; scripts/assets-watch)
 ```
 
 Consider using a development script like the example found in
@@ -28,7 +28,7 @@ development.
 ### Production Build
 
 ```
-npx webpack --config webpack.production.js
+(cd themes/arch; scripts/assets-build)
 ```
 
 ### Purge CSS
@@ -37,7 +37,9 @@ TODO
 
 ### Hash Assets
 
-TODO
+```
+(cd themes/arch; scripts/dist-hash)
+```
 
 ### Prettier
 
@@ -45,7 +47,13 @@ Why run prettier on your production assets? Well, maybe you shouldn't, but I
 like to.
 
 ```bash
-themes/arch/scripts/prettier
+(cd themes/arch; scripts/dist-prettier)
+```
+
+### Remove Empty Lines
+
+```bash
+(cd themes/arch; scripts/dist-remove-empty-lines)
 ```
 
 ### Customize
