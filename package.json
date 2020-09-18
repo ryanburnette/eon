@@ -1,10 +1,9 @@
 {
-  "name": "@ryanburnette/arch",
-  "private": true,
-  "version": "0.25.0",
+  "name": "arc",
+  "version": "0.26.0",
   "author": "Ryan Burnette <ryan.burnette@gmail.com> (https://ryanburnette.com)",
   "license": "ISC",
-  "description": "The arch Hugo theme.",
+  "description": "Arc needs no description.",
   "devDependencies": {
     "@ryanburnette/hash-assets": "^1.0.1",
     "@ryanburnette/html-remove-empty-lines": "^1.1.3",

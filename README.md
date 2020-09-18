@@ -1,24 +1,41 @@
-# arch
+# Arc
 
-This is the arch hugo theme... a work in progress.
+> Why is the sky red? Why are stop signs round? Is it weird that Luke kissed
+> his sister in Star Trek?
 
-## Core Concepts
+This is Arc. Arc is a Hugo theme with styles based on Bulma. Hopefully it will
+be the last website I ever build.
 
-- It's bad to have a partial where there an unequal number of opening and
+## Pet Peeves
+
+- It is bad to have a partial where there an unequal number of opening and
   closing tags.
-- Break things up into tiny, logical, well-defined pieces so it's easy to
-  override or use what you need.
+- Break things up into tiny, logical, well-defined pieces. Use what works.
+  Override what doesn't work.
+
+## Dependencies
+
+Install this stuff before you try to use Arc.
+
+- Hugo
+- Node.js
+- walkdo https://git.ryanburnette.com/ryanburnette/walkdo
+
+Consider using [Webinstall.dev](https://webinstall.dev) for Hugo and Node.js.
+For walkdo, you'll have to download the binary from the project page and put it
+in your path.
 
 ## Assets
 
 The theme contains assets as well as webpack build steps.
 
+
 ### Development
 
 Run webpack in watch mode during development.
 
-```
-(cd themes/arch; scripts/assets-watch)
+```bash
+(cd themes/arc; scripts/assets-watch)
 ```
 
 Consider using a development script like the example found in
@@ -28,7 +45,7 @@ development.
 ### Production Build
 
 ```
-(cd themes/arch; scripts/assets-build)
+(cd themes/arc; scripts/assets-build)
 ```
 
 ### Purge CSS
@@ -38,7 +55,7 @@ TODO
 ### Hash Assets
 
 ```
-(cd themes/arch; scripts/dist-hash)
+(cd themes/arc; scripts/dist-hash)
 ```
 
 ### Prettier
@@ -47,13 +64,13 @@ Why run prettier on your production assets? Well, maybe you shouldn't, but I
 like to.
 
 ```bash
-(cd themes/arch; scripts/dist-prettier)
+(cd themes/arc; scripts/dist-prettier)
 ```
 
 ### Remove Empty Lines
 
 ```bash
-(cd themes/arch; scripts/dist-remove-empty-lines)
+(cd themes/arc; scripts/dist-remove-empty-lines)
 ```
 
 ### Customize

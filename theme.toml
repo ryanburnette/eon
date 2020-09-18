@@ -1,8 +1,8 @@
-name = "arch"
+name = "Arc"
 license = "ISC"
-licenselink = "https://github.com/ryanburnette/arch/blob/master/LICENSE"
-description = ""
-homepage = "https://github.com.com/ryanburnette/arch"
+licenselink = "https://git.ryanburnette.com/ryanburnette/arc/src/branch/master/LICENSE"
+description = "Arc needs no description."
+homepage = "https://git.ryanburnette.com/ryanburnette/arc"
 tags = []
 features = []
 min_version = "0.41.0"

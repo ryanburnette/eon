@@ -46,9 +46,9 @@ module.exports = {
 // but use project as context if user adds ./src/css/ and ./src/js/
 function getContext() {
   if (fs.existsSync(path.resolve(__dirname, '../../src/js/main.js'))) {
-    console.log('arch hugo theme: using custom project assets context');
+    console.log('Arc: using custom project assets context');
     return path.resolve(__dirname, '../../src');
   }
-  console.log('arch hugo theme: using default theme assets context');
+  console.log('Arc: using default theme assets context');
   return path.resolve(__dirname, './src');
 }
