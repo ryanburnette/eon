@@ -5,11 +5,9 @@
   "license": "ISC",
   "description": "Arc needs no description.",
   "devDependencies": {
-    "@ryanburnette/hash-assets": "^1.0.1",
-    "@ryanburnette/html-remove-empty-lines": "^1.1.3",
     "@ryanburnette/spawn-in-parallel": "^1.0.1",
     "autoprefixer": "^9.8.0",
-    "bulma": "^0.8.2",
+    "bulma": "^0.9.0",
     "css-loader": "^3.5.3",
     "lateral": "^3.0.5",
     "mini-css-extract-plugin": "^0.9.0",
@@ -18,8 +16,8 @@
     "sass-loader": "^8.0.2",
     "sass-mediaqueries": "^1.6.1",
     "style-loader": "^1.2.1",
-    "webpack": "^5.0.0-beta.16",
-    "webpack-cli": "^3.3.11",
-    "webpack-merge": "^4.2.2"
+    "webpack": "^5.0.0-beta.32",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.4"
   }
 }

@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-'use strict';
-
-walkdo -g *.html -d public/ prettier --write --print-width=10000
+walkdo -g "*.html" -d public/ prettier --write --print-width=10000
+#prettier --write --print-width=10000 --write public/**/*.html

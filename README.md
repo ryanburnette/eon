@@ -1,7 +1,7 @@
 # Arc
 
-> Why is the sky red? Why are stop signs round? Is it weird that Luke kissed
-> his sister in Star Trek?
+> Why is the sky red? Why are stop signs round? Is it weird that Luke kissed his
+> sister in Star Trek?
 
 This is Arc. Arc is a Hugo theme with styles based on Bulma. Hopefully it will
 be the last website I ever build.
@@ -19,9 +19,11 @@ Install this stuff before you try to use Arc.
 
 - Hugo
 - Node.js
-  - Prettier
-  - JSHint
+  - [Prettier](https://prettier.io/)
+  - [JSHint](https://github.com/jshint/jshint)
   - [hash-assets](https://git.ryanburnette.com/ryanburnette/hash-assets)
+  - [html-remove-empty-lines](https://git.ryanburnette.com/ryanburnette/html-remove-empty-lines)
+  - [PurgeCSS](https://purgecss.com/)
 - [walkdo](https://git.ryanburnette.com/ryanburnette/walkdo)
 
 Consider using [Webinstall.dev](https://webinstall.dev) for Hugo and Node.js.
@@ -41,18 +43,23 @@ npm install -g npm prettier jshint @ryanburnette/hash-assets @ryanburnette/html-
 ```
 
 ```bash
-curl https://git.ryanburnette.com/attachments/1c1d163e-df71-4a2c-b373-86ec8dbcef61 --output walkdo.tar.gz 
+curl https://git.ryanburnette.com/attachments/1c1d163e-df71-4a2c-b373-86ec8dbcef61 --output walkdo.tar.gz
 tar zxf walkdo.tar.gz
 chmod +x walkdo
 rm walkdo.tar.gz
 mv walkdo ~/bin
 ```
 
-## Assets
+## Build
 
-The theme contains assets as well as webpack build steps.
+### Modifying Hugo Dist
 
-### Development
+What's up with all these global dependencies for the build process? Why are you
+running Prettier on the dist HTML? Wait, you're grooming the output? Yes, that's
+right. I understand there are several reasons someone might not like that. You
+don't have to do it if you don't want to. It's just something I like to do.
+
+## Development
 
 Run webpack in watch mode during development.
 
