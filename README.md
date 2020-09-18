@@ -13,22 +13,44 @@ be the last website I ever build.
 - Break things up into tiny, logical, well-defined pieces. Use what works.
   Override what doesn't work.
 
-## Dependencies
+## Global Dependencies
 
 Install this stuff before you try to use Arc.
 
 - Hugo
 - Node.js
-- walkdo https://git.ryanburnette.com/ryanburnette/walkdo
+  - Prettier
+  - JSHint
+  - [hash-assets](https://git.ryanburnette.com/ryanburnette/hash-assets)
+- [walkdo](https://git.ryanburnette.com/ryanburnette/walkdo)
 
 Consider using [Webinstall.dev](https://webinstall.dev) for Hugo and Node.js.
-For walkdo, you'll have to download the binary from the project page and put it
-in your path.
+Node.js comes with NPM which will be used to install the Node.js global
+dependencies. For walkdo, you'll have to download the binary from the project
+page and put it in your path.
+
+Here are some install commands for convenience.
+
+```bash
+curl https://webinstall.dev/hugo | bash
+curl https://webinstall.dev/node@lts | bash
+```
+
+```bash
+npm install -g npm prettier jshint @ryanburnette/hash-assets @ryanburnette/html-remove-empty-lines
+```
+
+```bash
+curl https://git.ryanburnette.com/attachments/1c1d163e-df71-4a2c-b373-86ec8dbcef61 --output walkdo.tar.gz 
+tar zxf walkdo.tar.gz
+chmod +x walkdo
+rm walkdo.tar.gz
+mv walkdo ~/bin
+```
 
 ## Assets
 
 The theme contains assets as well as webpack build steps.
-
 
 ### Development
 
