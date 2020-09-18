@@ -1,14 +1,3 @@
-#!/usr/bin/env node
-'use strict';
+#!/usr/bin/env bash
 
-var path = require('path');
-var { exec } = require('child_process');
-
-var libbin = path.resolve(
-  __dirname,
-  '../node_modules/@ryanburnette/html-remove-empty-lines/bin/html-remove-empty-lines.js'
-);
-
-var pubdir = path.resolve(__dirname, '../../../public');
-
-exec(libbin + ' ' + pubdir);
+walkdo -g *.html -d public/ html-remove-empty-lines

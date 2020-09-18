@@ -1,9 +1,3 @@
-#!/usr/bin/env node
-'use strict';
+#!/usr/bin/env bash
 
-var path = require('path');
-var hashAssets = require('@ryanburnette/hash-assets');
-
-var pubdir = path.resolve(__dirname, '../../../public');
-
-hashAssets(pubdir);
+hash-assets public/
