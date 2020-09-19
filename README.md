@@ -118,6 +118,18 @@ rm -rf .hugo
 
 Make sure `.hugo/` is in the project `.gitignore`.
 
+### Hugo Gotcha
+
+You can't have HTML comments in Hugo layouts, so you won't want Prettier running
+on those files. You must create a `.prettierignore` in the root of your project
+and ignore any layout files.
+
+```
+# .prettierignore
+layouts/**/*.html
+themes/arc/layouts/**/*.html
+```
+
 ## Configuration
 
 ### Meta Redirect
