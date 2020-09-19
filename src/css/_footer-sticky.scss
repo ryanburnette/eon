@@ -1,0 +1,20 @@
+// https://css-tricks.com/couple-takes-sticky-footer/#there-is-flexbox
+
+// This is a sticky footer strategy provided by flexbox.
+// For this to work, the body must have only two child elements,
+// `.main` and `.footer`.
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
