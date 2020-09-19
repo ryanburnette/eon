@@ -28,6 +28,11 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.875rem;
+    border-bottom: 2px solid transparent;
+  }
+  a:hover {
+    text-decoration: none;
+    border-color: $black;
   }
   .revealer a {
     font-size: 0.875rem;
@@ -38,7 +43,7 @@
       text-decoration: none;
     }
     &.hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
   li:last-of-type {

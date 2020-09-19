@@ -5,6 +5,10 @@
   margin-bottom: 3rem * 1.618;
   .brand {
     flex-grow: 1;
+    h1 a,
+    h1 a:hover {
+      border: none;
+    }
   }
   .content,
   h1 {
@@ -18,6 +22,6 @@
     color: $black;
   }
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
