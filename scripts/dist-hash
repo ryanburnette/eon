@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-hash-assets public/
+npx hash-assets public/

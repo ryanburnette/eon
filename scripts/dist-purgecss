@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-purgecss -c themes/arc/purgecss.config.js
+npx purgecss -c themes/arc/purgecss.config.js

@@ -5,6 +5,8 @@
   "license": "ISC",
   "description": "Arc needs no description.",
   "devDependencies": {
+    "@ryanburnette/hash-assets": "^1.0.5",
+    "@ryanburnette/html-remove-empty-lines": "^1.1.4",
     "@ryanburnette/spawn-in-parallel": "^1.0.1",
     "autoprefixer": "^9.8.0",
     "bulma": "^0.9.0",
@@ -13,6 +15,8 @@
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
+    "prettier": "^2.1.2",
+    "purgecss": "^3.0.0",
     "sass-loader": "^8.0.2",
     "sass-mediaqueries": "^1.6.1",
     "style-loader": "^1.2.1",

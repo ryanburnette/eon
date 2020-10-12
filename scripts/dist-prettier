@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-walkdo -g "*.html" -d public/ prettier --write --print-width=10000
-#prettier --write --print-width=10000 --write public/**/*.html
+npx prettier --write --print-width=10000 --write 'public/**/*.html'

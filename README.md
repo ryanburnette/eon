@@ -24,12 +24,10 @@ Install this stuff before you try to use Arc.
   - [hash-assets](https://git.ryanburnette.com/ryanburnette/hash-assets)
   - [html-remove-empty-lines](https://git.ryanburnette.com/ryanburnette/html-remove-empty-lines)
   - [PurgeCSS](https://purgecss.com/)
-- [walkdo](https://git.ryanburnette.com/ryanburnette/walkdo)
 
-Consider using [Webinstall.dev](https://webinstall.dev) for Hugo and Node.js.
-Node.js comes with NPM which will be used to install the Node.js global
-dependencies. For walkdo, you'll have to download the binary from the project
-page and put it in your path.
+Consider using [Webinstall.dev](https://webinstall.dev) for Hugo and
+Node.js. Node.js comes with NPM which will be used to install the Node.js
+global dependencies. 
 
 Here are some install commands for convenience.
 

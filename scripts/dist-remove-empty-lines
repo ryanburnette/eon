@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-#walkdo -g "*.html" -d public/ html-remove-empty-lines
-html-remove-empty-lines public/
+npx html-remove-empty-lines public/
