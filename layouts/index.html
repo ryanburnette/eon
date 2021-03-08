@@ -1,12 +1,15 @@
 {{ define "main" }}
+<div class="hero">
+  <div class="container">
+    <h1>
+      {{ if (isset .Params "hero_title" ) }} {{ .Params.hero_title }} {{ else }}
+      {{ .Title }} {{ end }}
+    </h1>
+  </div>
+</div>
 <section class="section default-single">
   <div class="container">
-    <div class="hero">
-      <h1>{{ .Title }}</h1>
-    </div>
-    <div class="content">
-      {{ .Content }}
-    </div>
+    <div class="content">{{ .Content }}</div>
   </div>
 </section>
 {{ end }}

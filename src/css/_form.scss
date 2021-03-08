@@ -1,1 +1,13 @@
 @import 'bulma/sass/form/_all.sass';
+.button-field {
+  padding-top: 0.5rem;
+}
+
+// when we have multiple help messages (validations) on forms
+// we want them to be broken into paragraphs
+// but not have any bottom margin
+.form .field p.help,
+.content .form .field p.help {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
