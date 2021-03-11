@@ -1,110 +1,116 @@
-# Arc
+# [eon](https://github.com/ryanburnette/eon)
 
-> Why is the sky red? Why are stop signs round? Is it weird that Luke kissed his
-> sister in Star Trek?
+This is eon, it's a Hugo theme and custom Bulma implementation used for building
+websites.
 
-This is Arc. Arc is a Hugo theme with styles based on Bulma. Hopefully it will
-be the last website I ever build.
+## Features
 
-## Pet Peeves
+- decent Hugo theme
+- provides a decent implementation of Bulma to get started
+- provides scripts for getting the site built
+- webpack asset build
+- hash assets
+- prettier on the dist
+- remove empty lines from dist html
 
-- It is bad to have a partial where there an unequal number of opening and
-  closing tags.
-- Break things up into tiny, logical, well-defined pieces. Use what works.
-  Override what doesn't work.
+## Rules to live by
+
+- Partials should never have an unequal number of opening and closing tags.
+- Break things up into small, easy-to-understand, well-defined pieces. Use what
+  makes sense.
+
+## Installation
+
+First, have a look at the
+[Hugo Quick Start](https://gohugo.io/getting-started/quick-start/) if you
+haven't already familiarized.
+
+Create a Hugo site and add the eon theme.
+
+```bash
+hugo new site mysite
+cd mysite
+git init
+git submodule add https://github.com/ryanburnette/eon themes/eon
+```
+
+Get to work.
+
+```bash
+themes/eon/scripts/development
+```
 
 ## Global Dependencies
 
-Install this stuff before you try to use Arc.
+You'll need Hugo and Node.js installed in your environment.
 
-- Hugo
-- Node.js
-  - [Prettier](https://prettier.io/)
-  - [JSHint](https://github.com/jshint/jshint)
-  - [hash-assets](https://git.ryanburnette.com/ryanburnette/hash-assets)
-  - [html-remove-empty-lines](https://git.ryanburnette.com/ryanburnette/html-remove-empty-lines)
-  - [PurgeCSS](https://purgecss.com/)
+[Webinstall.dev](https://webinstall.dev) is a great way to install them.
 
-Consider using [Webinstall.dev](https://webinstall.dev) for Hugo and
-Node.js. Node.js comes with NPM which will be used to install the Node.js
-global dependencies. 
-
-Here are some install commands for convenience.
+Install webi.
 
 ```bash
-curl https://webinstall.dev/hugo | bash
-curl https://webinstall.dev/node@lts | bash
+curl https://webinstall.dev/webi | bash
 ```
+
+Install dependencies.
 
 ```bash
-npm install -g npm prettier jshint @ryanburnette/hash-assets @ryanburnette/html-remove-empty-lines
+webi node@lts hugo
 ```
 
-```bash
-curl https://git.ryanburnette.com/attachments/1c1d163e-df71-4a2c-b373-86ec8dbcef61 --output walkdo.tar.gz
-tar zxf walkdo.tar.gz
-chmod +x walkdo
-rm walkdo.tar.gz
-mv walkdo ~/bin
-```
+## Assets
 
-## Build
+TODO write about theme assets vs project assets
 
-### Modifying Hugo Dist
+## Scripts
 
-What's up with all these global dependencies for the build process? Why are you
-running Prettier on the dist HTML? Wait, you're grooming the output? Yes, that's
-right. I understand there are several reasons someone might not like that. You
-don't have to do it if you don't want to. It's just something I like to do.
+The scripts that are included with eon are:
 
-## Development
+- interpreted by Node.js
+- intended to be called from the project directory, ie.
+  `themes/eon/scripts/build` ... this may cause the relative paths of the output
+  to seem strange when you're running scripts, just remember that they are
+  running from the theme directory
 
-Run webpack in watch mode during development.
+### `assets-build`
 
-```bash
-(cd themes/arc; scripts/assets-watch)
-```
+Builds front-end assets with Webpack for production.
 
-Consider using a development script like the example found in
-`scripts/development` when you have multiple processes to spin during
-development.
+### `assets-watch`
 
-### Production Build
+Watch front-end assets and rebuild for development.
 
-```
-(cd themes/arc; scripts/assets-build)
-```
+### `build`
 
-### Purge CSS
+### `development`
 
-TODO
+Spin up Hugo and Webpack simultanously for development.
 
-### Hash Assets
+### `dist-hash`
 
-```
-(cd themes/arc; scripts/dist-hash)
-```
+Run [@ryanburnette/hash-assets](https://github.com/ryanburnette/hash-assets) on
+the site.
 
-### Prettier
+### `dist-prettier`
 
-Why run prettier on your production assets? Well, maybe you shouldn't, but I
-like to.
+Run prettier on the site. It might seem weird to run Prettier on your dist, but
+I like doing so.
 
-```bash
-(cd themes/arc; scripts/dist-prettier)
-```
+- It allows me to keep partials organized and indented in their own context.
+- It makes the dist HTML more readable.
+- It helps me find errors in the dist HTML.
 
-### Remove Empty Lines
+### `dist-purgecss`
 
-```bash
-(cd themes/arc; scripts/dist-remove-empty-lines)
-```
+Run purgecss on the dist.
 
-### Customize
+### `dist-remove-empty-lines`
 
-You can copy the webpack configuration files down to your own project, as well
-as create a main.scss and main.js in your own project's respective directories.
-Include the theme partials, copy partials down and edit them, or override them.
+Run
+[@ryanburnette/html-remove-empty-lines](https://github.com/ryanburnette/html-remove-empty-lines)
+on the dist HTML.
+
+## Notes
 
 ### Hugo Cache
 
@@ -114,7 +120,7 @@ The hugo cache is set to `./.hugo` for easier clearing.
 rm -rf .hugo
 ```
 
-Make sure `.hugo/` is in the project `.gitignore`.
+Make sure `.hugo/` is in the project's `.gitignore`.
 
 ### Hugo Gotcha
 
@@ -125,10 +131,17 @@ and ignore any layout files.
 ```
 # .prettierignore
 layouts/**/*.html
-themes/arc/layouts/**/*.html
+themes/eon/layouts/**/*.html
 ```
 
 ## Configuration
+
+### `config.toml`
+
+```toml
+# config.toml
+theme = "eon"
+```
 
 ### Meta Redirect
 

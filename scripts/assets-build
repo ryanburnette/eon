@@ -3,7 +3,7 @@
 var path = require('path');
 var { spawn } = require('child_process');
 
-var cmd = 'npx webpack --config webpack.production.js --production';
+var cmd = 'npm ci; npx webpack --config webpack.production.js';
 
 spawn(cmd, {
   env: {

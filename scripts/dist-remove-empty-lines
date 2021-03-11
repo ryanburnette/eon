@@ -1,2 +1,15 @@
-#!/usr/bin/env bash
-npx html-remove-empty-lines public/
+#!/usr/bin/env node
+var path = require('path');
+var { spawn } = require('child_process');
+
+var public = path.resolve(__dirname, '../../../public');
+var cmd = `npx html-remove-empty-lines ${public}`;
+
+spawn(cmd, {
+  env: {
+    PATH: process.env.PATH
+  },
+  shell: true,
+  stdio: ['inherit', 'inherit', 'inherit'],
+  cwd: path.resolve(__dirname, '..')
+});

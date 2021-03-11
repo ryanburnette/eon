@@ -5,7 +5,6 @@ var path = require('path');
 var spawn = require('@ryanburnette/spawn-in-parallel');
 
 var projectDir = path.resolve(__dirname, '../../..');
-var themeDir = path.resolve(__dirname, '..');
 var cacheDir = path.join(projectDir, '.hugo');
 
 spawn([
@@ -16,9 +15,9 @@ spawn([
     }
   },
   {
-    cmd: 'npx webpack --config webpack.development.js --watch --colors',
+    cmd: 'themes/eon/scripts/assets-watch',
     opts: {
-      cwd: themeDir
+      cwd: projectDir
     }
   }
 ]);

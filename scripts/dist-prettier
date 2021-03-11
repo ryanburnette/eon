@@ -1,2 +1,16 @@
-#!/usr/bin/env bash
-npx prettier --write --print-width=10000 --write 'public/**/*.html'
+#!/usr/bin/env node
+
+var path = require('path');
+var { spawn } = require('child_process');
+
+var public = path.resolve(__dirname, '../../../public');
+var cmd = `npx prettier --write --print-width=10000 --write '${public}/**/*.html'`;
+
+spawn(cmd, {
+  env: {
+    PATH: process.env.PATH
+  },
+  shell: true,
+  stdio: ['inherit', 'inherit', 'inherit'],
+  cwd: path.resolve(__dirname, '..')
+});

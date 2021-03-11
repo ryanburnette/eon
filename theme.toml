@@ -1,8 +1,8 @@
-name = "arc"
+name = "eon"
 license = "ISC"
-licenselink = "https://git.ryanburnette.com/ryanburnette/arc/src/branch/master/LICENSE"
-description = "Arc needs no description."
-homepage = "https://git.ryanburnette.com/ryanburnette/arc"
+licenselink = "https://github.com/ryanburnette/eon/src/branch/master/LICENSE"
+description = "Eon is a Hugo theme and custom Bulma implementation for building websites."
+homepage = "https://github.com/ryanburnette/eon"
 tags = []
 features = []
 min_version = "0.41.0"

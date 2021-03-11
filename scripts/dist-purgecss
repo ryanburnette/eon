@@ -1,2 +1,14 @@
-#!/usr/bin/env bash
-npx purgecss -c themes/arc/purgecss.config.js
+#!/usr/bin/env node
+var path = require('path');
+var { spawn } = require('child_process');
+
+var cmd = `npx purgecss -c purgecss.config.js`;
+
+spawn(cmd, {
+  env: {
+    PATH: process.env.PATH
+  },
+  shell: true,
+  stdio: ['inherit', 'inherit', 'inherit'],
+  cwd: path.resolve(__dirname, '..')
+});
