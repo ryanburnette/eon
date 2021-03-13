@@ -5,11 +5,10 @@ var path = require('path');
 var spawn = require('@ryanburnette/spawn-in-parallel');
 
 var projectDir = path.resolve(__dirname, '../../..');
-var cacheDir = path.join(projectDir, '.hugo');
 
 spawn([
   {
-    cmd: `hugo server -D -p 3000 --cacheDir ${cacheDir}`,
+    cmd: `themes/eon/scripts/hugo-development`,
     opts: {
       cwd: projectDir
     }

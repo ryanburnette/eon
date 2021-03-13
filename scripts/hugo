@@ -4,7 +4,9 @@
 var path = require('path');
 var { spawn } = require('child_process');
 
-var cmd = 'npm ci; npx webpack --config webpack.production.js';
+var projectDir = path.resolve(__dirname, '../../..');
+
+var cmd = 'hugo';
 
 spawn(cmd, {
   env: {
@@ -12,5 +14,5 @@ spawn(cmd, {
   },
   shell: true,
   stdio: ['inherit', 'inherit', 'inherit'],
-  cwd: path.resolve(__dirname, '..')
+  cwd: projectDir
 });
