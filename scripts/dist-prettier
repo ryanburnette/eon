@@ -4,8 +4,8 @@
 var path = require('path');
 var { spawn } = require('child_process');
 
-var public = path.resolve(__dirname, '../../../public');
-var cmd = `npx prettier --write --print-width=10000 --write '${public}/**/*.html'`;
+var publicDir = path.resolve(__dirname, '../../../public');
+var cmd = `npx prettier --write --print-width=10000 --write '${publicDir}/**/*.html'`;
 
 spawn(cmd, {
   env: {
