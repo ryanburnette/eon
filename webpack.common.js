@@ -3,14 +3,31 @@
 var fs = require('fs');
 var path = require('path');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var { merge } = require('webpack-merge');
 
-module.exports = {
-  context: getContext(),
+// asset override for eon
+// currently works by using project assets if [project]/src/js/main.js exists
+// otherwise uses theme assets
+// will need to improve this approach
+var _eonPath;
+if (fs.existsSync(path.resolve(__dirname, '../../src/js/main.js'))) {
+  console.log('==> eon: using *project* assets');
+  _eonPath = path.resolve(__dirname, '../../src');
+} else {
+  console.log('==> eon: using *theme* assets');
+  _eonPath = path.resolve(__dirname, './src');
+}
+
+function eonPath(p) {
+  return path.join(_eonPath, p);
+}
+
+var config = {
   entry: {
-    main: './js/main.js'
+    main: eonPath('js/main.js')
   },
   output: {
-    path: path.resolve(__dirname, 'static'),
+    path: path.resolve(__dirname, '../../static'),
     filename: `[name].js`
   },
   module: {
@@ -42,13 +59,11 @@ module.exports = {
   }
 };
 
-// use theme as context,
-// but use project as context if user adds ./src/css/ and ./src/js/
-function getContext() {
-  if (fs.existsSync(path.resolve(__dirname, '../../src/js/main.js'))) {
-    console.log('==> eon: using *project* assets');
-    return path.resolve(__dirname, '../../src');
-  }
-  console.log('==> eon: using *theme* assets');
-  return path.resolve(__dirname, './src');
+if (fs.existsSync(path.resolve(__dirname, '../../webpack.common.js'))) {
+  config = merge(
+    config,
+    require(path.resolve(__dirname, '../../webpack.common.js'))
+  );
 }
+
+module.exports = config;
