@@ -1,0 +1,11 @@
+<div class="hero">
+  <div class="container">
+    <h1>
+      {{ if (isset .Params "hero_title" ) }}
+        {{ .Params.hero_title }}
+      {{ else }}
+        {{ .Title }}
+      {{ end }}
+    </h1>
+  </div>
+</div>
