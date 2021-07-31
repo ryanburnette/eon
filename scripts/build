@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+themes/eon/scripts/assets-build
+themes/eon/scripts/hugo
+themes/eon/scripts/dist-purgecss
+themes/eon/scripts/dist-prettier
+themes/eon/scripts/dist-remove-empty-lines
+themes/eon/scripts/dist-hash
