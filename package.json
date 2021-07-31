@@ -1,10 +1,10 @@
 {
   "name": "@ryanburnette/eon",
-  "version": "0.36.0",
+  "version": "0.37.0",
   "author": "Ryan Burnette <ryan.burnette@gmail.com> (https://ryanburnette.com)",
   "license": "ISC",
   "description": "Eon is a Hugo theme and custom Bulma implementation for building websites.",
-  "dependencies": {
+  "devDependencies": {
     "@ryanburnette/hash-assets": "^1.1.1",
     "@ryanburnette/html-remove-empty-lines": "^1.1.6",
     "@ryanburnette/spawn-in-parallel": "^1.0.1",
@@ -15,6 +15,7 @@
     "mini": "^0.0.2",
     "mini-css-extract-plugin": "^2.1.0",
     "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12",
     "postcss-loader": "^6.1.1",
     "prettier": "^2.3.2",
     "purgecss": "^4.0.3",
