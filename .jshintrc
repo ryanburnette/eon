@@ -1,4 +1,10 @@
 {
   "node": true,
-  "esversion": 8
+  "esversion": 8,
+  "globals": {
+    "test": true,
+    "expect": true,
+    "describe": true,
+    "it": true
+  }
 }
