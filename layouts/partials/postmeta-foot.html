@@ -1,1 +1,9 @@
-<div class="postmeta-foot">{{- partial "categories" . -}}</div>
+<div class="postmeta-foot">
+
+  {{ partial "categories" . }}
+
+  {{ if .Site.Params.suggestedits }}
+    {{ partial "suggest-edit" . }}
+  {{ end }} 
+
+</div>
