@@ -2,5 +2,4 @@
 {{ if (isset .Params "redirect") }}
 <meta http-equiv="refresh" content="0;url={{ .Params.redirect }}" />
 {{ end }}
-<base href="{{ .Site.BaseURL }}/" />
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/style.css" />
