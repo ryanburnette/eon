@@ -16,7 +16,9 @@
   }
   pre,
   code {
-    color: $black;
+    a {
+      color: $black;
+    }
   }
   pre {
     padding: 1.5rem 1.5rem 1.4rem;
