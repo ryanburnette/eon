@@ -136,11 +136,10 @@ themes/eon/layouts/**/*.html
 
 ## Configuration
 
-### `config.toml`
+For the examples we assume you have a single `config.yaml` file. Yaml is easier.
 
-```toml
-# config.toml
-theme = "eon"
+```yaml
+theme: eon
 ```
 
 ### Meta Redirect
