@@ -1,0 +1,18 @@
+{{ if (isset .Site.Params "git_repo") -}}
+<span class="edit" style='
+    vertical-align: middle;
+    font-size: 1rem;
+    padding: 0.5rem;
+    {{ if not (isset .Site.Params "show_edit") -}}
+      display: none;
+    {{- end }}
+  ' {{ if not (isset .Site.Params "show_edit") -}}
+    hidden
+  {{- end }}><a
+    {{ if eq .Site.Params.git_host "gitea" -}}
+        href="{{ .Site.Params.git_repo }}/_edit/{{ .Site.Params.git_branch }}/content/{{ .File.Dir }}{{ .File.LogicalName }}"
+    {{- else -}}
+        href="{{ .Site.Params.git_repo }}/edit/{{ .Site.Params.git_branch }}/content/{{ .File.Dir }}{{ .File.LogicalName }}"
+    {{- end }}
+    target="_blank">{{ .Site.Params.show_edit }}</a></span>
+{{- end }}

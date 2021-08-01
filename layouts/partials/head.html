@@ -1,6 +1,16 @@
 <title>{{ if ne .Page.Title "" }}{{ .Page.Title }} - {{ end }}{{ .Site.Title }}</title>
 <meta name="viewport" content="width=device-width" />
-{{ if (isset .Params "redirect") }}
-<meta http-equiv="refresh" content="0;url={{ .Params.redirect }}" />
-{{ end }}
+{{ if isset .Site.Params "redirect" -}}
+<meta http-equiv="refresh" content="0;url={{ .Site.Params.redirect }}" />
+{{- end }}
 <link rel="stylesheet" href='{{ "style.css" | absURL }}' />
+{{ if isset .Site.Params "git_repo" -}}
+<meta name="git_repo" content="{{ .Site.Params.git_repo }}" />
+{{ if isset .Site.Params "git_host" -}}
+<meta name="git_host" content="{{ .Site.Params.git_host }}" />
+{{- end }}
+{{ if isset .Site.Params "git_branch" -}}
+<meta name="git_branch" content="{{ .Site.Params.git_branch }}" />
+{{- end }}
+<meta name="content_path" content="content" />
+{{- end }}
