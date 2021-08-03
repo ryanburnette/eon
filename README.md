@@ -5,7 +5,7 @@ websites.
 
 It looks a little something like this...
 
-![eon](https://user-images.githubusercontent.com/2252601/128049223-a14807b6-6c1c-4381-befb-dc88edacd7b7.png)
+![eon](https://user-images.githubusercontent.com/2252601/128049346-f187bb73-8d05-47e5-8ef6-283d8517190a.png)
 
 Here are some sites that use eon:
 
