@@ -28,7 +28,7 @@ Here are some sites that use eon:
 - Break things up into small, easy-to-understand, well-defined pieces. Use what
   makes sense.
 
-## Installation
+## Install
 
 First, have a look at the
 [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/) if you
@@ -59,7 +59,7 @@ the output message to be sure, but Hugo will probably be running on port 3000:
 http://localhost:3000/
 ```
 
-### Update eon
+## Update
 
 If you'd like to update your submodule of eon and get the latest version:
 
@@ -69,10 +69,50 @@ pushd ./themes/eon
   git pull
 popd
 git add ./themes/eon
-git commit -m "chore: update eon submodule"
+git commit -m "update eon"
 git submodule init
 git submodule update
 ```
+
+## Configure
+
+For the examples we assume you have a single `config.yaml` file. We're using
+yaml, but Hugo has other options.
+
+```yaml
+theme: eon
+```
+
+### Meta Redirect
+
+Set the `redirect` param to the new URL in front-matter to set a meta redirect
+on that page.
+
+### Suggest Edit
+
+If you like having an edit button on your posts for convenience, set `show_edit`
+to the text you wish to display (you'll also need to set the `git_*` stuff in
+order to construct the link).
+
+```yaml
+# config.yaml
+Params:
+  suggest_edit: 'Suggest Edit'
+  git_branch: main
+  git_host: github
+  git_repo: 'https://github.com/YOUR_USER/YOUR_REPO'
+```
+
+If `git_repo`, etc are set, they will also appear in the `<head>` like this:
+
+```html
+<meta name="git_repo" content="https://github.com/YOUR_USER/YOUR_REPO" />
+```
+
+
+## Assets
+
+TODO write about theme assets vs project assets
 
 ### Rebuild Assets
 
@@ -94,28 +134,6 @@ popd
 
 Running `./themes/eon/scripts/dist-purgecss` will reduce the CSS size by about
 95%.
-
-## Global Dependencies
-
-You'll need Hugo and Node.js installed in your environment.
-
-[Webinstall.dev](https://webinstall.dev) is a great way to install them.
-
-Install webi.
-
-```bash
-curl https://webinstall.dev/webi | bash
-```
-
-Install dependencies.
-
-```bash
-webi node@lts hugo
-```
-
-## Assets
-
-TODO write about theme assets vs project assets
 
 ## Scripts
 
@@ -187,38 +205,4 @@ and ignore any layout files.
 # .prettierignore
 layouts/**/*.html
 themes/eon/layouts/**/*.html
-```
-
-## Configuration
-
-For the examples we assume you have a single `config.yaml` file. Yaml is easier.
-
-```yaml
-theme: eon
-```
-
-### Meta Redirect
-
-Set the `redirect` param to the new URL in front-matter to set a meta redirect
-on that page.
-
-### Suggest Edit
-
-If you like having an edit button on your posts for convenience, set `show_edit`
-to the text you wish to display (you'll also need to set the `git_*` stuff in
-order to construct the link).
-
-```yaml
-# config.yaml
-Params:
-  suggest_edit: 'Suggest Edit'
-  git_branch: main
-  git_host: github
-  git_repo: 'https://github.com/YOUR_USER/YOUR_REPO'
-```
-
-If `git_repo`, etc are set, they will also appear in the `<head>` like this:
-
-```html
-<meta name="git_repo" content="https://github.com/YOUR_USER/YOUR_REPO" />
 ```
