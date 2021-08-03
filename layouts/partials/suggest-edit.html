@@ -1,3 +1,12 @@
 <div class="suggest-edit">
-  <a href="#">Suggest Edit</a>
+  <a
+    {{ if eq .Site.Params.git_host "gitea" }}
+        href="{{ .Site.Params.git_repo }}/_edit/{{ .Site.Params.git_branch }}/content/{{ .File.Dir }}{{ .File.LogicalName }}"
+    {{ else }}
+        href="{{ .Site.Params.git_repo }}/edit/{{ .Site.Params.git_branch }}/content/{{ .File.Dir }}{{ .File.LogicalName }}"
+    {{ end }}
+    target="_blank"
+  >
+    {{ .Site.Params.suggest_edit }}
+  </a>
 </div>

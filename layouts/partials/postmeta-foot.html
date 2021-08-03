@@ -1,9 +1,12 @@
 <div class="postmeta-foot">
-
-  {{ partial "categories" . }}
-
-  {{ if .Site.Params.suggestedits }}
-    {{ partial "suggest-edit" . }}
-  {{ end }} 
-
+  <div class="columns">
+    <div class="column">
+      {{ partial "categories" . }}
+    </div>
+    <div class="column">
+      {{ if (and (isset .Site.Params "suggest_edit") (isset .Site.Params "git_repo") (isset .Site.Params "git_branch") (isset .Site.Params "git_host")) }}
+        {{ partial "suggest-edit" . }}
+      {{ end }}
+    </div>
+  </div>
 </div>

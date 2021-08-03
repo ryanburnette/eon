@@ -146,3 +146,24 @@ theme: eon
 
 Set the `redirect` param to the new URL in front-matter to set a meta redirect
 on that page.
+
+### Suggest Edit
+
+If you like having an edit button on your posts for convenience, set `show_edit`
+to the text you wish to display (you'll also need to set the `git_*` stuff in
+order to construct the link).
+
+```yaml
+# config.yaml
+Params:
+  suggest_edit: 'Suggest Edit'
+  git_branch: main
+  git_host: github
+  git_repo: 'https://github.com/YOUR_USER/YOUR_REPO'
+```
+
+If `git_repo`, etc are set, they will also appear in the `<head>` like this:
+
+```html
+<meta name="git_repo" content="https://github.com/YOUR_USER/YOUR_REPO" />
+```

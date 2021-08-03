@@ -1,8 +1,4 @@
 .postmeta-foot {
-  @extend .columns;
-  > div {
-    @extend .column;
-  }
   p,
   span,
   li {
@@ -17,10 +13,5 @@
   a:hover {
     color: $light-gray;
     text-decoration: underline;
-  }
-  .suggest-edit {
-    @include tablet {
-      text-align: right;
-    }
   }
 }
