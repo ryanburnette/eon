@@ -1,4 +1,19 @@
 <div class="postmeta-foot">
+  {{ if isset .Site.Params "utterences_repo" }}
+  <script src="https://utteranc.es/client.js"
+    repo="{{ .Site.Params.utterences_repo }}"
+    {{ if isset .Page "utterences_term" -}}
+      issue-term="{{ .Page.utterences_term }}"
+    {{- else if isset .Site.Params "utterences_term" -}}
+      issue-term="{{ .Site.Params.utterences_term }}"
+    {{- else -}}
+      issue-term="pathname"
+    {{- end }}
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  {{ end }}
   <div class="columns">
     <div class="column">
       {{ partial "categories" . }}
