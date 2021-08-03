@@ -1,3 +1,9 @@
-{{ if not (eq (.Params.date) (.Params.lastmod)) }}
-  <span class="date-lastmod">Updated {{ dateFormat "January 2, 2006" .Params.lastmod }}</span>
-{{ end }}
+{{ if isset .Params "lastmod" -}}
+  {{- if not (eq (.Params.date) (.Params.lastmod)) -}}
+    <span class="date-lastmod">Updated {{ dateFormat "January 2, 2006" .Params.lastmod }}</span>
+  {{- end -}}
+{{- else if isset .GitInfo "lastmod" -}}
+  {{- if not (eq (.Params.date) (.GitInfo.lastmod)) -}}
+    <span class="date-lastmod">Updated {{ dateFormat "January 2, 2006" .GitInfo.lastmod }}</span>
+  {{- end -}}
+{{- end }}
