@@ -3,12 +3,9 @@
   <div class="container">
     <div class="content">
       {{ partial "postmeta-head" . }}
-      <h1 class="title">{{ .Title }}</h1>
-      <!-- prettier-ignore -->
+      {{ partial "title" . }}
       {{ .Content }}
-      <!-- prettier-ignore -->
       {{ partial "postmeta-foot" . }}
-      <!-- prettier-ignore -->
       {{ partial "disqus" . }}
     </div>
   </div>

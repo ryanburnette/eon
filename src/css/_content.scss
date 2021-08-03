@@ -17,7 +17,7 @@
   pre,
   code {
     a {
-      color: $black;
+      color: $text-strong;
     }
   }
   pre {
@@ -49,5 +49,11 @@
   a {
     word-break: break-all;
     word-break: break-word;
+  }
+  .title,
+  .title a,
+  .title a:hover {
+    color: $text-strong;
+    text-decoration: none;
   }
 }
