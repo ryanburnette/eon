@@ -40,6 +40,37 @@ Get to work.
 themes/eon/scripts/development
 ```
 
+## Config
+
+```yaml
+theme: 'eon'
+Author:
+  name: 'John Doe'
+  email: 'john.doe@example.com'
+
+Params:
+  gravatar: true
+  # if you'd like a "Edit" or "Suggest Edit" link by your Titles
+  show_edit: 'Suggest Edit'
+  git_repo: 'https://github.com/YOUR_USER/YOUR_REPO'
+  git_branch: 'main'
+  git_host: 'github'
+```
+
+<kbd><img width="526" alt="Screen Shot 2021-08-03 at 12 13 53 AM" src="https://user-images.githubusercontent.com/122831/127966869-0ad9e971-88f5-40b9-9d9d-8e82810bbace.png"></kbd>
+
+#### Show Edit
+
+If you like having an edit button on your posts for convenience, set `show_edit`
+to the text you wish to display (you'll also need to set the `git_*` stuff in
+order to construct the link).
+
+If `git_repo`, etc are set, they will also appear in the `<head>` like this:
+
+```html
+<meta name="git_repo" content="https://github.com/YOUR_USER/YOUR_REPO" />
+```
+
 ## Global Dependencies
 
 You'll need Hugo and Node.js installed in your environment.
