@@ -34,6 +34,10 @@ First, have a look at the
 [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/) if you
 haven't already familiarized.
 
+You'll need Hugo installed at the very least. You'll need git. You'll need Node
+16 if you're going to be building assets. See [webi](https://webinstall.dev) for
+installing environmental dependencies.
+
 Create a Hugo site and add the eon theme.
 
 ```bash
@@ -108,7 +112,6 @@ If `git_repo`, etc are set, they will also appear in the `<head>` like this:
 ```html
 <meta name="git_repo" content="https://github.com/YOUR_USER/YOUR_REPO" />
 ```
-
 
 ## Assets
 
