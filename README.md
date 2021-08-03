@@ -104,7 +104,8 @@ Params:
   suggest_edit: 'Suggest Edit'
   git_branch: main
   git_host: github
-  git_repo: 'https://github.com/YOUR_USER/YOUR_REPO'
+  git_repo: 'https://github.com/<username>/<project>'
+  utterences_repo: '<username>/<project>'
 ```
 
 If `git_repo`, etc are set, they will also appear in the `<head>` like this:
