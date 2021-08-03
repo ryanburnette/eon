@@ -28,8 +28,8 @@ haven't already familiarized.
 Create a Hugo site and add the eon theme.
 
 ```bash
-hugo new site mysite
-cd mysite
+hugo new site example.com
+cd example.com
 git init
 git submodule add https://github.com/ryanburnette/eon themes/eon
 ```
@@ -37,8 +37,54 @@ git submodule add https://github.com/ryanburnette/eon themes/eon
 Get to work.
 
 ```bash
-themes/eon/scripts/development
+pushd ./themes/eon/
+  npm ci
+popd
+./themes/eon/scripts/development
 ```
+
+**IMPORTANT**: Both `webpack` and `hugo` will be running their servers. Check
+the output message to be sure, but Hugo will probably be running on port 3000:
+
+```txt
+http://localhost:3000/
+```
+
+### Update eon
+
+If you'd like to update your submodule of eon and get the latest version:
+
+```bash
+pushd ./themes/eon
+  git checkout master
+  git pull
+popd
+git add ./themes/eon
+git commit -m "chore: update eon submodule"
+git submodule init
+git submodule update
+```
+
+### Rebuild Assets
+
+If you change the styles and want to rebuild the css files, here's how:
+
+```bash
+npm install
+pushd ./themes/eon/
+  npm ci
+popd
+
+./themes/eon/scripts/assets-build
+./themes/eon/scripts/hugo
+./themes/eon/scripts/dist-purgecss
+./themes/eon/scripts/dist-prettier
+./themes/eon/scripts/dist-remove-empty-lines
+./themes/eon/scripts/dist-hash
+```
+
+Running `./themes/eon/scripts/dist-purgecss` will reduce the CSS size by about
+95%.
 
 ## Global Dependencies
 
