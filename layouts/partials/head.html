@@ -1,5 +1,21 @@
 <meta name="viewport" content="width=device-width" />
-{{ if (isset .Params "redirect") }}
+
+{{ if (isset .Params "redirect") -}}
 <meta http-equiv="refresh" content="0;url={{ .Params.redirect }}" />
-{{ end }}
+{{- end }}
+
+{{ if isset .Site.Params "git_repo" -}}
+<meta name="git_repo" content="{{ .Site.Params.git_repo }}" />
+{{- end }}
+
+{{ if isset .Site.Params "git_host" -}}
+<meta name="git_host" content="{{ .Site.Params.git_host }}" />
+{{- end }}
+
+{{ if isset .Site.Params "git_branch" -}}
+<meta name="git_branch" content="{{ .Site.Params.git_branch }}" />
+{{- end }}
+
+<meta name="content_path" content="content" />
+
 <link rel="stylesheet" href='{{ "style.css" | absURL }}' />
