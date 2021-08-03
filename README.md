@@ -3,9 +3,9 @@
 This is eon, it's a Hugo theme and custom Bulma implementation used for building
 websites.
 
-This is what it looks like:
+It looks a little something like this...
 
-<img width="966" alt="Screen Shot 2021-08-03 at 12 54 46 AM" src="https://user-images.githubusercontent.com/122831/127971230-6113dfa3-0e17-44a5-9633-67d74970aae0.png">
+![eon](https://user-images.githubusercontent.com/2252601/128049223-a14807b6-6c1c-4381-befb-dc88edacd7b7.png)
 
 Here are some sites that use eon:
 
