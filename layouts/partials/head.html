@@ -1,3 +1,4 @@
+<title>{{ if ne .Page.Title "" }}{{ .Page.Title }} - {{ end }}{{ .Site.Title }}</title>
 <meta name="viewport" content="width=device-width" />
 {{ if (isset .Params "redirect") }}
 <meta http-equiv="refresh" content="0;url={{ .Params.redirect }}" />
