@@ -121,7 +121,7 @@ To implement [utterances](https://github.com/utterance/utterances) set
 ```yaml
 # config.yaml
 Params:
-  utterences_repo: '<username>/<project>'
+  utterances_repo: '<username>/<project>'
 ```
 
 ## Assets
