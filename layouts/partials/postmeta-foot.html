@@ -2,8 +2,8 @@
   {{ if isset .Site.Params "utterences_repo" }}
   <script src="https://utteranc.es/client.js"
     repo="{{ .Site.Params.utterences_repo }}"
-    {{ if isset .Page "utterences_term" -}}
-      issue-term="{{ .Page.utterences_term }}"
+    {{ if isset .Params "utterences_term" -}}
+      issue-term="{{ .Params.utterences_term }}"
     {{- else if isset .Site.Params "utterences_term" -}}
       issue-term="{{ .Site.Params.utterences_term }}"
     {{- else -}}
