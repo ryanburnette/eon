@@ -5,6 +5,11 @@ module.exports = {
   css: ['../../public/**/*.css'],
   output: '../../public/',
   keyframes: true,
-  whitelist: [],
+  whitelist: [
+    'utterances',
+    'utterances-container',
+    'disqus',
+    'disqus-container'
+  ],
   whitelistPatterns: []
 };
