@@ -89,7 +89,7 @@ theme: eon
 
 ### Meta Redirect
 
-Set the `redirect` param to the new URL in front-matter to set a meta redirect
+Set the `redirect` param to the new URL in front matter to set a meta redirect
 on that page.
 
 ### Suggest Edit
@@ -115,13 +115,48 @@ If `git_repo`, etc are set, they will also appear in the `<head>` like this:
 
 ### Utterances
 
-To implement [utterances](https://github.com/utterance/utterances) set
-`utterances_repo` in your site params.
+To enable [utterances](https://github.com/utterance/utterances), set
+`utterances_repo` in your site params. Utterances comments will be enabled on
+all posts by default, but you can specify boolean value `utterances_default` in
+your site params.
 
 ```yaml
 # config.yaml
 Params:
-  utterances_repo: '<username>/<project>'
+  utterances_repo: '[github_username]/[repo]'
+  utterances_default: [true*|false]
+```
+
+You can override whether utterances will be displayed by default in a post's
+front matter by setting a boolean value on `utterances` there. You can also
+override a post's `utterances_term` by setting it in the post's front matter.
+
+```yaml
+utterances: [true|false]
+utterances_term: [term]
+```
+
+### Disqus
+
+To enable [Disqus](https://disqus.com/), set `disqus_url` in your site params.
+The `disqus_url` is the `embed.js` URL found in your Disqus code in your
+installation guide. Disqus comments will be enabled on all posts by default, but
+you can specify boolean value `disqus_default` in your site params.
+
+```yaml
+# config.yaml
+Params:
+  disqus_url: 'https://[site_name].disqus.com/embed.js'
+  disqus_default: [true*|false]
+```
+
+You can override whether Disqus will be displayed by default in a post's front
+matter by setting a boolean value on `disqus` there. You can override a post's
+`disqus_url` by setting it in the post's front matter.
+
+```yaml
+disqus: [true|false]
+disqus_url: [url]
 ```
 
 ## Assets

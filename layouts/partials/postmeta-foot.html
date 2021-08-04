@@ -9,7 +9,6 @@
       {{ end }}
     </div>
   </div>
-  {{ if isset .Site.Params "utterances_repo" }}
     {{ partial "utterances" . }}
-  {{ end }}
+    {{ partial "disqus" . }}
 </div>

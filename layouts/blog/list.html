@@ -8,14 +8,12 @@
   <div class="container">
     <div class="content">
       {{ partial "bloghead" . }} {{ range .Pages }}
-      <!-- prettier-ignore -->
-      {{ if not (isset .Params "noindex") }}
-      <article class="item">
-        {{ partial "postmeta-head" . }}
-        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-      </article>
-      <!-- prettier-ignore -->
-      {{ end }}
+        {{ if not (isset .Params "noindex") }}
+          <article class="item">
+            {{ partial "postmeta-head" . }}
+            {{ partial "title" . }}
+          </article>
+        {{ end }}
       {{ end }}
     </div>
   </div>

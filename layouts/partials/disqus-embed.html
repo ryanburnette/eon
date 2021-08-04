@@ -1,0 +1,17 @@
+<div class="disqus-container">
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      {{ if (isset .Params "disqus_page_url") }}
+        this.page.url = {{ .Params.disqus_page_url }};
+      {{ end }}
+    };
+    (function () {
+      var d = document,
+        s = d.createElement('script');
+      s.src = '{{ .Site.Params.disqus_url }}/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+</div>

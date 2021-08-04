@@ -1,0 +1,15 @@
+<div class="utterances-container">
+  <script src="https://utteranc.es/client.js"
+    repo="{{ .Site.Params.utterances_repo }}"
+    {{ if isset .Params "utterances_term" -}}
+      issue-term="{{ .Params.utterances_term }}"
+    {{- else if isset .Site.Params "utterances_term" -}}
+      issue-term="{{ .Site.Params.utterances_term }}"
+    {{- else -}}
+      issue-term="pathname"
+    {{- end }}
+    theme="github-light"
+    crossorigin="anonymous"
+    async
+  ></script>
+</div>
