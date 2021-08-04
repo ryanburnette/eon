@@ -152,11 +152,12 @@ Params:
 
 You can override whether Disqus will be displayed by default in a post's front
 matter by setting a boolean value on `disqus` there. You can override a post's
-`disqus_url` by setting it in the post's front matter.
+Disqus url by setting `disqus_page_url` by setting it in the post's front
+matter.
 
 ```yaml
 disqus: [true|false]
-disqus_url: [url]
+disqus_page_url: [url]
 ```
 
 ## Assets
