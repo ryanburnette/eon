@@ -10,12 +10,13 @@ It looks a little something like this...
 Here are some sites that use eon:
 
 - [ryanburnette.com](https://ryanburnette.com)
+- [persyburnette.com](https://prayersforpersy.com)
 - [therootcompany.com](https://therootcompany.com)
 
 ## Features
 
 - decent Hugo theme
-- provides a decent implementation of Bulma to get started
+- provides a decent implementation of Bulma to get you started
 - provides scripts for getting the site built
 - webpack asset build
 - hash assets
@@ -170,16 +171,12 @@ If you change the styles and want to rebuild the css files, here's how:
 
 ```bash
 npm install
-pushd ./themes/eon/
-  npm ci
+pushd themes/eon/
+  npm install
 popd
 
-./themes/eon/scripts/assets-build
-./themes/eon/scripts/hugo
-./themes/eon/scripts/dist-purgecss
-./themes/eon/scripts/dist-prettier
-./themes/eon/scripts/dist-remove-empty-lines
-./themes/eon/scripts/dist-hash
+# this script runs all the build steps, take a look at the source to customize
+bash themes/eon/scripts/build
 ```
 
 Running `./themes/eon/scripts/dist-purgecss` will reduce the CSS size by about
@@ -204,10 +201,6 @@ Builds front-end assets with Webpack for production.
 Watch front-end assets and rebuild for development.
 
 ### `build`
-
-### `development`
-
-Spin up Hugo and Webpack simultanously for development.
 
 ### `dist-hash`
 
@@ -234,6 +227,10 @@ Run
 on the dist HTML.
 
 ## Notes
+
+### Node Version
+
+expected to run on node@18
 
 ### Hugo Cache
 
