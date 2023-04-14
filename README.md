@@ -102,6 +102,7 @@ order to construct the link).
 ```yaml
 # config.yaml
 Params:
+  enableGitInfo: true
   suggest_edit: 'Suggest Edit'
   git_branch: main
   git_host: github
