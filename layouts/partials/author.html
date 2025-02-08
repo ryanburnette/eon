@@ -4,8 +4,8 @@
   {{ $author.Set "name" .Params.author.name }}
   {{ $author.Set "email" .Params.author.email }}
   {{ else }}
-  {{ $author.Set "name" .Site.Author.name }}
-  {{ $author.Set "email" .Site.Author.email }}
+  {{ $author.Set "name" .Site.Params.Author.name }}
+  {{ $author.Set "email" .Site.Params.Author.email }}
   {{ end }}
 
   {{ if .Site.Params.gravatar }}
