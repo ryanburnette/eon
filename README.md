@@ -95,7 +95,7 @@ on that page.
 
 ### Suggest Edit
 
-If you like having an edit button on your posts for convenience, set `show_edit`
+If you like having an edit button on your posts for convenience, set `suggest_edit`
 to the text you wish to display (you'll also need to set the `git_*` stuff in
 order to construct the link).
 
